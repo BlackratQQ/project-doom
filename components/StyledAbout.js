@@ -85,17 +85,3 @@ export const TechnologyColumn = styled.div`
     padding: 20px;
   }
 `;
-
-export const TechItem = styled.div`
-  border: 2px solid #f2f2f2;
-  padding: 10px;
-  text-align: center;
-  background-color: #0d1117;
-  color: #f2f2f2;
-
-  @media (min-width: 768px) {
-    position: absolute;
-    top: ${(props) => props.top};
-    left: ${(props) => props.left};
-  }
-`;

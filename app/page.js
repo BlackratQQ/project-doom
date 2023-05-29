@@ -11,10 +11,10 @@ import {
 import Footer from '@/components/Footer';
 import Welcome from '@/components/Welcome';
 import About from '@/components/About';
-import Sidebar from '@/components/menu/Sidebar';
-import MobileMenu from '@/components/menu/MobileMenu';
-import { GlobalStyle } from '@/components/help/fonts';
-import Menu from '@/components/menu/Menu';
+import Sidebar from '@/components/Menu/Sidebar';
+import MobileMenu from '@/components/Menu/MobileMenu';
+import { GlobalStyle } from '@/components/Help/fonts';
+import Menu from '@/components/Menu/Menu';
 
 export default function Home() {
   return (
