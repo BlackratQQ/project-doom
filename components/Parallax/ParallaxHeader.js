@@ -1,4 +1,5 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
+import { gsap } from 'gsap';
 
 import {
   Header,
@@ -16,6 +17,9 @@ import {
   Fog5,
   Mountain7,
   Text,
+  TextH1,
+  TextParagraphFirst,
+  TextParagraphSecond,
   Mountain6,
   Fog4,
   Mountain5,
@@ -32,6 +36,42 @@ import {
 } from './StyledParallaxHeader';
 
 const ParallaxHeader = () => {
+  useEffect(() => {
+    const parallaxElements = document.querySelectorAll('.parallax');
+
+    function handleMouseMove(e) {
+      const xValue = e.clientX - window.innerWidth / 2;
+      const yValue = e.clientY - window.innerHeight / 2;
+      const rotateDegree = (xValue / (window.innerWidth / 2)) * 20;
+
+      parallaxElements.forEach((el) => {
+        const speedX = el.dataset.speedx;
+        const speedY = el.dataset.speedy;
+        const speedZ = el.dataset.speedz;
+        const rotateSpeed = el.dataset.rotation;
+
+        const isInLeft =
+          parseFloat(getComputedStyle(el).left) < window.innerWidth / 2
+            ? 1
+            : -1;
+        const zValue =
+          (e.clientX - parseFloat(getComputedStyle(el).left)) * isInLeft * 0.1;
+
+        el.style.transform = `perspective(2300px) translateZ(${
+          zValue * speedZ
+        }px) rotateY(${rotateDegree * rotateSpeed}deg) translateX(calc(-50% + ${
+          -xValue * speedX
+        }px)) translateY(calc(-50% + ${yValue * speedY}px))`;
+      });
+    }
+
+    window.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
   return (
     <Fragment>
       <Header>
@@ -119,8 +159,9 @@ const ParallaxHeader = () => {
           data-distance='2000'
         />
         <Text>
-          <h2>China</h2>
-          <h1>Zhangjiajie</h1>
+          <TextH1>Vojtěch Kochta</TextH1>
+          <TextParagraphFirst>Front-End</TextParagraphFirst>
+          <TextParagraphSecond>D.e.v.e.l.o.p.e.r</TextParagraphSecond>
         </Text>
         <Mountain6
           src='/Parallax/mountain_6.png'
@@ -141,7 +182,7 @@ const ParallaxHeader = () => {
           data-distance='2400'
         />
         <Mountain5
-          src='/Parallax/mountain_5.png'
+          src='/Parallax/mountain_5_2.png'
           className='parallax'
           data-speedx='0.08'
           data-speedy='0.03'
