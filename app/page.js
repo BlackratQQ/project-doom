@@ -15,11 +15,12 @@ import About from '@/components/About';
 import Testimonials from '@/components/Testimonials/Testimonials';
 import { GlobalStyle } from '@/components/Help/fonts';
 import Menu from '@/components/Menu/Menu';
+import ParallaxHeader from '@/components/Parallax/ParallaxHeader';
 
 export default function Home() {
   return (
     <GridContainer>
-      <GlobalStyle />
+      {/* <GlobalStyle />
       <GridHeader>
         <Welcome />
       </GridHeader>
@@ -32,7 +33,8 @@ export default function Home() {
       </GridMain>
       <GridFooter>
         <Footer />
-      </GridFooter>
+      </GridFooter> */}
+      <ParallaxHeader />
     </GridContainer>
   );
 }
