@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Container,
   FlipCard,
   FlipCardInner,
   FlipCardFront,
   FlipCardBack,
+  BackgroundFog,
+  VideoBackground,
 } from './StyledTestimonials';
 
 const Testimonial = [

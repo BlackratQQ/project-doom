@@ -16,25 +16,23 @@ import Testimonials from '@/components/Testimonials/Testimonials';
 import { GlobalStyle } from '@/components/Help/fonts';
 import Menu from '@/components/Menu/Menu';
 import ParallaxHeader from '@/components/Parallax/ParallaxHeader';
+import Portfolio from '@/components/Portfolio/Portfolio';
 
 export default function Home() {
   return (
     <GridContainer>
-      {/* <GlobalStyle />
+      <GlobalStyle />
       <GridHeader>
-        <Welcome />
-      </GridHeader>
-      <GridSidebar>
+        <ParallaxHeader />
         <Menu />
-      </GridSidebar>
+      </GridHeader>
+      <GridSidebar></GridSidebar>
       <GridMain>
-        <About />
-        <Testimonials />
+        <Portfolio />
       </GridMain>
       <GridFooter>
         <Footer />
-      </GridFooter> */}
-      <ParallaxHeader />
+      </GridFooter>
     </GridContainer>
   );
 }

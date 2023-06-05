@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Sidebar from './Sidebar';
+import HeaderMenu from './HeaderMenu';
 import MobileMenu from './MobileMenu';
 
 const Menu = () => {
@@ -16,7 +16,7 @@ const Menu = () => {
   return (
     <div>
       <MobileMenu isOpen={isOpen} toggle={toggle} key={key} />
-      <Sidebar toggle={toggle} />
+      <HeaderMenu toggle={toggle} />
     </div>
   );
 };

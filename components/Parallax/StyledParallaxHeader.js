@@ -1,43 +1,5 @@
 import styled from 'styled-components';
 
-export const Logo = styled.img`
-  width: 100px;
-`;
-
-export const Header = styled.header`
-  position: absolute;
-  z-index: 9999;
-  width: 100%;
-  padding: 0.9rem 0;
-  top: 0;
-  left: 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-`;
-
-export const Nav = styled.nav`
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-export const Ul = styled.ul`
-  display: flex;
-  list-style: none;
-  align-items: center;
-`;
-
-export const Link = styled.a`
-  text-decoration: none;
-  color: #fff;
-  padding: 0 1.5rem;
-  text-transform: uppercase;
-  font-weight: 300;
-  font-size: 0.83rem;
-`;
-
 export const Background = styled.div`
   position: relative;
   height: 100vh;
@@ -56,6 +18,9 @@ export const BgImg = styled.img`
   top: 1.86%;
   left: 50.69%;
   z-index: 1;
+
+  transform: perspective(2300px) translateZ(0px) rotateY(0deg)
+    translateX(calc(-50% + 121.05px)) translateY(calc(-50% + 54.34px));
 
   @media (max-width: 725px) {
     width: initial;
@@ -147,6 +112,10 @@ export const Mountain7 = styled.img`
   width: 37.36%;
   top: 65.18%;
   left: 71.18%;
+  transform: translateZ(0);
+  transform: translateX(calc(-50% + 59px));
+  transform: translateY(calc(-50% - 32px));
+  transform: rotateY(-1.79697deg);
 
   @media (max-width: 725px) {
     width: initial;

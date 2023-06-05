@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 import { FaTimes } from 'react-icons/fa';
 
-export const SidebarContainer = styled.aside`
+export const SidebarContainer = styled.div`
   position: fixed;
   width: 50%;
   height: 100%; /* Set height to 100% of viewport */
@@ -61,6 +61,7 @@ export const MobileIcon = styled.div`
   font-size: 1.8rem;
   cursor: pointer;
   color: #fff;
+  z-index: 100;
 
   @media (min-width: 769px) {
     display: none; /* Skryjte komponentu na desktopových zařízeních */

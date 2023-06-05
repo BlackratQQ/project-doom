@@ -1,5 +1,6 @@
-import React, { Fragment, useEffect, useRef, useState } from 'react';
+import React, { Fragment, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import Menu from '../Menu/Menu';
 
 import {
   Header,
@@ -36,6 +37,7 @@ import {
 } from './StyledParallaxHeader';
 
 const ParallaxHeader = () => {
+  //Slide down
   const parallaxElements = useRef();
 
   useEffect(() => {
@@ -55,8 +57,40 @@ const ParallaxHeader = () => {
         );
       }
     });
+
+    //Text Animace
+    timeline
+      .from(
+        '.text h1',
+        {
+          y:
+            window.innerHeight -
+            document.querySelector('.text h1').getBoundingClientRect().top +
+            200,
+          duration: 2,
+        },
+        '2.5'
+      )
+      .from(
+        '.text .first',
+        {
+          y: -150,
+          opacity: 0,
+          duration: 1.5,
+        },
+        '3'
+      )
+      .from(
+        '.hide',
+        {
+          opacity: 0,
+          duration: 1.5,
+        },
+        '3'
+      );
   }, []);
 
+  //Parallax
   useEffect(() => {
     const parallaxElements = document.querySelectorAll('.parallax');
 
@@ -86,6 +120,17 @@ const ParallaxHeader = () => {
       });
     }
 
+    function triggerMouseMoveEvent() {
+      const fakeEvent = new MouseEvent('mousemove', {
+        clientX: window.innerWidth / 2,
+        clientY: window.innerHeight / 2,
+      });
+
+      handleMouseMove(fakeEvent);
+    }
+
+    triggerMouseMoveEvent();
+
     window.addEventListener('mousemove', handleMouseMove);
 
     return () => {
@@ -95,17 +140,7 @@ const ParallaxHeader = () => {
 
   return (
     <Fragment>
-      <Header>
-        <Nav>
-          <Logo src='/Parallax/logo.png' alt='' />
-          <Ul>
-            <Link href='#'>Login</Link>
-            <Link href='#'>Sign up</Link>
-          </Ul>
-        </Nav>
-      </Header>
-
-      <Background>
+      <Background ref={parallaxElements}>
         <Vignette />
         <BgImg
           src='/Parallax/background.png'
@@ -179,10 +214,12 @@ const ParallaxHeader = () => {
           data-rotation='0.09'
           data-distance='2000'
         />
-        <Text>
-          <TextH1>Vojtěch Kochta</TextH1>
-          <TextParagraphFirst>Front-End</TextParagraphFirst>
-          <TextParagraphSecond>D.e.v.e.l.o.p.e.r</TextParagraphSecond>
+        <Text className='text'>
+          <TextH1 className='hide'>Vojtěch Kochta</TextH1>
+          <TextParagraphFirst className='first'>Front-End</TextParagraphFirst>
+          <TextParagraphSecond className='hide'>
+            D.e.v.e.l.o.p.e.r
+          </TextParagraphSecond>
         </Text>
         <Mountain6
           src='/Parallax/mountain_6.png'
