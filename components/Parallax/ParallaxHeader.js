@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment, useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 
 import {
@@ -36,6 +36,27 @@ import {
 } from './StyledParallaxHeader';
 
 const ParallaxHeader = () => {
+  const parallaxElements = useRef();
+
+  useEffect(() => {
+    const elements = parallaxElements.current.children;
+
+    const timeline = gsap.timeline();
+
+    Array.from(elements).forEach((el) => {
+      if (el.classList.contains('parallax')) {
+        timeline.from(
+          el,
+          {
+            top: `${el.offsetHeight / 2 + +el.dataset.distance}px`,
+            duration: 1,
+          },
+          '1'
+        );
+      }
+    });
+  }, []);
+
   useEffect(() => {
     const parallaxElements = document.querySelectorAll('.parallax');
 
