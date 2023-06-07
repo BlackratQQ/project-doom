@@ -9,22 +9,25 @@ export const GridContainer = styled.div`
     'header header'
     'main main'
     'footer footer';
+  overflow-x: hidden;
+
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
 `;
 
 export const GridHeader = styled.header`
   grid-area: header;
   //background-color: #01070e;
-`;
-
-export const GridSidebar = styled.nav`
-  width: 100px; /* adjust this value as needed */
+  scroll-snap-align: start;
 `;
 
 export const GridMain = styled.main`
   grid-area: main;
+  scroll-snap-align: start;
 `;
 
 export const GridFooter = styled.footer`
   grid-area: footer;
   width: 100%;
+  scroll-snap-align: start;
 `;
