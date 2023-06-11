@@ -4,20 +4,19 @@ import React from 'react';
 import {
   GridContainer,
   GridHeader,
-  GridSidebar,
   GridMain,
   GridFooter,
+  Section1,
+  Section2,
+  Section3,
 } from './StyledPage';
 
 import Footer from '@/components/Footer';
-import Welcome from '@/components/Welcome';
 import About from '@/components/About/About';
-import Testimonials from '@/components/Testimonials/Testimonials';
 import { GlobalStyle } from '@/components/Help/fonts';
 import Menu from '@/components/Menu/Menu';
 import ParallaxHeader from '@/components/Parallax/ParallaxHeader';
-import Portfolio from '@/components/Portfolio/Portfolio';
-import ParallaxPortfolio from '@/components/About/About';
+import Services from '@/components/Services/Services';
 
 export default function Home() {
   return (
@@ -28,7 +27,12 @@ export default function Home() {
         <Menu />
       </GridHeader>
       <GridMain>
-        <About />
+        <Section1>
+          <About />
+        </Section1>
+        <Section2>
+          <Services />
+        </Section2>
       </GridMain>
       <GridFooter>
         <Footer />

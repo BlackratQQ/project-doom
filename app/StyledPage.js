@@ -10,7 +10,6 @@ export const GridContainer = styled.div`
     'main main'
     'footer footer';
   overflow-x: hidden;
-
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
 `;
@@ -25,6 +24,14 @@ export const GridMain = styled.main`
   grid-area: main;
   scroll-snap-align: start;
 `;
+
+export const Section1 = styled.div`
+  scroll-snap-align: start;
+`;
+export const Section2 = styled.div`
+  scroll-snap-align: start;
+`;
+export const Section3 = styled.div``;
 
 export const GridFooter = styled.footer`
   grid-area: footer;

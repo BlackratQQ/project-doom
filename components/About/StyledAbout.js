@@ -14,10 +14,10 @@ export const Parallax = styled.div`
 
 export const BgImg = styled.img`
   position: absolute;
-  width: 194.44%;
-  top: 5.86%;
+  width: 120.44%;
+  top: 90.86%;
   left: 50.69%;
-  z-index: 1;
+  z-index: 3;
 
   transform: perspective(2300px) translateZ(0px) rotateY(0deg)
     translateX(calc(-50% + 121.05px)) translateY(calc(-50% + 54.34px));
@@ -28,11 +28,76 @@ export const BgImg = styled.img`
   }
 `;
 
-export const Fog7 = styled.img`
+export const Sky = styled.img`
+  position: absolute;
+  z-index: 1;
+  top: 17.4%;
+  width: 120.44%;
+  left: 50.97%;
+
+  @media (max-width: 725px) {
+    width: initial;
+    height: 56.78%;
+  }
+`;
+
+export const Moon = styled.img`
   position: absolute;
   z-index: 2;
-  top: 105%;
-  left: 30.8%;
+  top: 17.4%;
+  width: 18.33%;
+  left: 90.97%;
+
+  @media (max-width: 725px) {
+    width: initial;
+    height: 56.78%;
+  }
+`;
+
+export const MoonShine = styled.img`
+  position: absolute;
+  z-index: 3;
+  top: 45.4%;
+  width: 120%;
+  left: 61.97%;
+
+  @media (max-width: 725px) {
+    width: initial;
+    height: 56.78%;
+  }
+`;
+
+export const Sun = styled.img`
+  position: absolute;
+  z-index: 5;
+  top: 17.4%;
+  width: 35.33%;
+  left: 90.97%;
+
+  @media (max-width: 725px) {
+    width: initial;
+    height: 56.78%;
+  }
+`;
+
+export const SunShine = styled.img`
+  position: absolute;
+  z-index: 6;
+  top: 40.4%;
+  width: 65.33%;
+  left: 72.97%;
+
+  @media (max-width: 725px) {
+    width: initial;
+    height: 56.78%;
+  }
+`;
+
+export const RockLeft = styled.img`
+  position: absolute;
+  z-index: 3;
+  top: 85%;
+  left: 10.8%;
   width: 60%;
 
   @media (max-width: 725px) {
@@ -41,11 +106,11 @@ export const Fog7 = styled.img`
   }
 `;
 
-export const Mountain10 = styled.img`
+export const RockRight = styled.img`
   position: absolute;
-  z-index: 3;
-  top: 87.58%;
-  left: 75.84%;
+  z-index: 4;
+  top: 95.58%;
+  left: 85.84%;
   width: 45.52%;
 
   @media (max-width: 725px) {
@@ -54,20 +119,7 @@ export const Mountain10 = styled.img`
   }
 `;
 
-export const Fog6 = styled.img`
-  position: absolute;
-  z-index: 4;
-  top: 72.09%;
-  left: 97.4%;
-  width: 30.3%;
-
-  @media (max-width: 725px) {
-    width: initial;
-    height: 73.11%;
-  }
-`;
-
-export const Mountain9 = styled.img`
+export const FrontLeftRock = styled.img`
   position: absolute;
   z-index: 5;
   top: 67.95%;
@@ -80,12 +132,25 @@ export const Mountain9 = styled.img`
   }
 `;
 
-export const Mountain8 = styled.img`
+export const FrontRightRock = styled.img`
   position: absolute;
-  z-index: 6;
-  top: 60.6%;
-  width: 56.25%;
-  left: 36%;
+  z-index: 4;
+  top: 72.09%;
+  left: 97.4%;
+  width: 30.3%;
+
+  @media (max-width: 725px) {
+    width: initial;
+    height: 73.11%;
+  }
+`;
+
+export const Cloud_1 = styled.img`
+  position: absolute;
+  z-index: 2;
+  top: 30.6%;
+  width: 15.25%;
+  left: 7%;
 
   @media (max-width: 725px) {
     height: 84.33%;
@@ -93,7 +158,46 @@ export const Mountain8 = styled.img`
   }
 `;
 
-export const Fog5 = styled.img`
+export const Cloud_2 = styled.img`
+  position: absolute;
+  z-index: 2;
+  top: 20.6%;
+  width: 20.25%;
+  left: 32%;
+
+  @media (max-width: 725px) {
+    height: 84.33%;
+    width: initial;
+  }
+`;
+
+export const Cloud_3 = styled.img`
+  position: absolute;
+  z-index: 2;
+  top: 5.6%;
+  width: 20.25%;
+  left: 42%;
+
+  @media (max-width: 725px) {
+    height: 84.33%;
+    width: initial;
+  }
+`;
+
+export const Cloud_4 = styled.img`
+  position: absolute;
+  z-index: 2;
+  top: 35.6%;
+  width: 20.25%;
+  left: 70%;
+
+  @media (max-width: 725px) {
+    height: 84.33%;
+    width: initial;
+  }
+`;
+
+export const Rock_11 = styled.img`
   position: absolute;
   z-index: 7;
   top: 69.7%;
@@ -151,19 +255,6 @@ export const Content = styled.p`
 
   p {
     margin-bottom: 20px;
-  }
-`;
-
-export const Mountain6 = styled.img`
-  position: absolute;
-  z-index: 10;
-  top: 57.4%;
-  width: 28.33%;
-  left: 90.97%;
-
-  @media (max-width: 725px) {
-    width: initial;
-    height: 56.78%;
   }
 `;
 

@@ -3,28 +3,24 @@ import React, { Fragment, useEffect, useRef } from 'react';
 import {
   Background,
   BgImg,
-  Fog7,
-  Mountain10,
-  Fog6,
-  Mountain9,
-  Mountain8,
-  Fog5,
-  Mountain7,
   AboutMe,
   Content,
-  Mountain6,
-  Fog4,
-  Mountain5,
-  Fog3,
-  Mountain4,
-  Mountain3,
-  Fog2,
-  Mountain2,
-  Mountain1,
-  SunRays,
-  BlackShadow,
-  Fog1,
+  RockLeft,
+  RockRight,
+  FrontLeftRock,
+  FrontRightRock,
+  Sky,
   Vignette,
+  Moon,
+  MoonShine,
+  Sun,
+  SunShine,
+  Rock_10,
+  Rock_11,
+  Cloud_1,
+  Cloud_2,
+  Cloud_3,
+  Cloud_4,
 } from './StyledAbout';
 
 const ParallaxHeader = () => {
@@ -80,9 +76,11 @@ const ParallaxHeader = () => {
   return (
     <Fragment>
       <Background ref={parallaxElements}>
-        <Vignette />
+        {/* <Vignette /> */}
+
+        {/* <ParticlesEffect /> */}
         <BgImg
-          src='/About/background.jpg'
+          src='/About/Ground.png'
           className='parallax'
           data-speedx='0.15'
           data-speedy='0.28'
@@ -90,8 +88,17 @@ const ParallaxHeader = () => {
           data-rotation='0'
           data-distance='-200'
         />
-        <Fog7
-          src='/About/Rock_4.png'
+        <Sky
+          src='/About/Sky.png'
+          className='parallax'
+          data-speedx='0.15'
+          data-speedy='0.28'
+          data-speedz='0'
+          data-rotation='0'
+          data-distance='-200'
+        />
+        <RockLeft
+          src='/About/RockLeft.png'
           className='parallax'
           data-speedx='0.13'
           data-speedy='0.32'
@@ -99,8 +106,9 @@ const ParallaxHeader = () => {
           data-rotation='0'
           data-distance='850'
         />
-        <Mountain10
-          src='/About/Rock_3.png'
+
+        <RockRight
+          src='/About/RockRight.png'
           className='parallax'
           data-speedx='0.095'
           data-speedy='0.205'
@@ -108,26 +116,9 @@ const ParallaxHeader = () => {
           data-rotation='0'
           data-distance='1100'
         />
-        <Fog6
-          src='/About/Rock_2.png'
-          className='parallax'
-          data-speedx='0.15'
-          data-speedy='0.18'
-          data-speedz='0'
-          data-rotation='0'
-          data-distance='1400'
-        />
-        <Mountain9
-          src='/About/Rock_1.png'
-          className='parallax'
-          data-speedx='0.125'
-          data-speedy='0.155'
-          data-speedz='0.15'
-          data-rotation='0.02'
-          data-distance='1700'
-        />
-        {/* <Mountain8
-          src='/About/mountain_8.png'
+
+        {/* <Moon
+          src='/About/Moon.png'
           className='parallax'
           data-speedx='0.1'
           data-speedy='0.11'
@@ -135,24 +126,70 @@ const ParallaxHeader = () => {
           data-rotation='0.02'
           data-distance='1800'
         />
-        <Fog5
-          src='/About/fog_5.png'
+        <MoonShine
+          src='/About/MoonShine.png'
           className='parallax'
           data-speedx='0.16'
           data-speedy='0.105'
           data-speedz='0'
           data-rotation='0'
           data-distance='1900'
-        />
-        <Mountain7
-          src='/About/mountain_7.png'
+        /> */}
+        <Sun
+          src='/About/Sun.png'
           className='parallax'
           data-speedx='0.1'
           data-speedy='0.1'
           data-speedz='0'
           data-rotation='0.09'
           data-distance='2000'
-        /> */}
+        />
+        <SunShine
+          src='/About/SunShine.png'
+          className='parallax'
+          data-speedx='0.1'
+          data-speedy='0.1'
+          data-speedz='0'
+          data-rotation='0.09'
+          data-distance='2000'
+        />
+        <Cloud_1
+          src='/About/Cloud_1.png'
+          className='parallax'
+          data-speedx='0.25'
+          data-speedy='0.35'
+          data-speedz='0'
+          data-rotation='0.09'
+          data-distance='2000'
+        />
+        <Cloud_2
+          src='/About/Cloud_2.png'
+          className='parallax'
+          data-speedx='0.12'
+          data-speedy='0.18'
+          data-speedz='0'
+          data-rotation='0.09'
+          data-distance='2000'
+        />
+        <Cloud_3
+          src='/About/Cloud_3.png'
+          className='parallax'
+          data-speedx='0.20'
+          data-speedy='0.12'
+          data-speedz='0'
+          data-rotation='0.09'
+          data-distance='2000'
+        />
+        <Cloud_4
+          src='/About/Cloud_4.png'
+          className='parallax'
+          data-speedx='0.33'
+          data-speedy='0.22'
+          data-speedz='0'
+          data-rotation='0.09'
+          data-distance='2000'
+        />
+
         <AboutMe>
           <Content>
             Jsem Bc. Vojtěch Kochta, 26letý JavaScript vývojář a dále studuji
