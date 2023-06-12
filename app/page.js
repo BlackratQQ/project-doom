@@ -11,7 +11,7 @@ import {
   Section3,
 } from './StyledPage';
 
-import Footer from '@/components/Footer';
+import Footer from '@/components/Contact/Contact';
 import About from '@/components/About/About';
 import { GlobalStyle } from '@/components/Help/fonts';
 import Menu from '@/components/Menu/Menu';

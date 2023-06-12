@@ -7,16 +7,10 @@ import {
   Content,
   RockLeft,
   RockRight,
-  FrontLeftRock,
-  FrontRightRock,
   Sky,
   Vignette,
-  Moon,
-  MoonShine,
   Sun,
   SunShine,
-  Rock_10,
-  Rock_11,
   Cloud_1,
   Cloud_2,
   Cloud_3,
@@ -76,118 +70,96 @@ const ParallaxHeader = () => {
   return (
     <Fragment>
       <Background ref={parallaxElements}>
-        {/* <Vignette /> */}
+        <Vignette />
 
-        {/* <ParticlesEffect /> */}
         <BgImg
           src='/About/Ground.png'
           className='parallax'
-          data-speedx='0.15'
-          data-speedy='0.28'
+          data-speedx='0.08'
+          data-speedy='0.14'
           data-speedz='0'
           data-rotation='0'
-          data-distance='-200'
         />
+
         <Sky
           src='/About/Sky.png'
           className='parallax'
-          data-speedx='0.15'
-          data-speedy='0.28'
+          data-speedx='0.05'
+          data-speedy='0.10'
           data-speedz='0'
           data-rotation='0'
-          data-distance='-200'
         />
+
         <RockLeft
           src='/About/RockLeft.png'
           className='parallax'
-          data-speedx='0.13'
-          data-speedy='0.32'
+          data-speedx='0.20'
+          data-speedy='0.40'
           data-speedz='0'
-          data-rotation='0'
-          data-distance='850'
+          data-rotation='0.1'
         />
 
         <RockRight
           src='/About/RockRight.png'
           className='parallax'
-          data-speedx='0.095'
-          data-speedy='0.205'
+          data-speedx='0.15'
+          data-speedy='0.40'
           data-speedz='0'
-          data-rotation='0'
-          data-distance='1100'
+          data-rotation='0.1'
         />
 
-        {/* <Moon
-          src='/About/Moon.png'
-          className='parallax'
-          data-speedx='0.1'
-          data-speedy='0.11'
-          data-speedz='0'
-          data-rotation='0.02'
-          data-distance='1800'
-        />
-        <MoonShine
-          src='/About/MoonShine.png'
-          className='parallax'
-          data-speedx='0.16'
-          data-speedy='0.105'
-          data-speedz='0'
-          data-rotation='0'
-          data-distance='1900'
-        /> */}
         <Sun
           src='/About/Sun.png'
           className='parallax'
-          data-speedx='0.1'
-          data-speedy='0.1'
+          data-speedx='0.12'
+          data-speedy='0.24'
           data-speedz='0'
           data-rotation='0.09'
-          data-distance='2000'
         />
+
         <SunShine
           src='/About/SunShine.png'
           className='parallax'
-          data-speedx='0.1'
-          data-speedy='0.1'
+          data-speedx='0.12'
+          data-speedy='0.24'
           data-speedz='0'
           data-rotation='0.09'
-          data-distance='2000'
         />
+
         <Cloud_1
           src='/About/Cloud_1.png'
           className='parallax'
-          data-speedx='0.25'
-          data-speedy='0.35'
+          data-speedx='0.10'
+          data-speedy='0.20'
           data-speedz='0'
           data-rotation='0.09'
-          data-distance='2000'
         />
+
         <Cloud_2
           src='/About/Cloud_2.png'
           className='parallax'
-          data-speedx='0.12'
-          data-speedy='0.18'
+          data-speedx='0.10'
+          data-speedy='0.20'
           data-speedz='0'
           data-rotation='0.09'
-          data-distance='2000'
         />
+
         <Cloud_3
           src='/About/Cloud_3.png'
           className='parallax'
-          data-speedx='0.20'
-          data-speedy='0.12'
+          data-speedx='0.10'
+          data-speedy='0.20'
           data-speedz='0'
           data-rotation='0.09'
-          data-distance='2000'
         />
+
         <Cloud_4
           src='/About/Cloud_4.png'
           className='parallax'
-          data-speedx='0.33'
-          data-speedy='0.22'
+          data-speedx='0.10'
+          data-speedy='0.20'
           data-speedz='0'
           data-rotation='0.09'
-          data-distance='2000'
         />
 
         <AboutMe>

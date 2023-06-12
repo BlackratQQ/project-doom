@@ -16,14 +16,6 @@ import {
   Vignette,
   Moon,
   MoonShine,
-  Sun,
-  SunShine,
-  Rock_10,
-  Rock_11,
-  Cloud_1,
-  Cloud_2,
-  Cloud_3,
-  Cloud_4,
 } from './StyledServices';
 import ParticlesEffect from './ParticlesEffect';
 
@@ -80,109 +72,96 @@ const Services = () => {
   return (
     <Fragment>
       <Background ref={parallaxElements}>
-        {/* <Vignette /> */}
+        <Vignette />
 
         <ParticlesEffect />
         <Desert
           src='/Services/Desert.png'
           className='parallax'
-          data-speedx='0.15'
-          data-speedy='0.28'
+          data-speedx='0.01'
+          data-speedy='0.02'
           data-speedz='0'
           data-rotation='0'
-          data-distance='-200'
+        />
+        <Rocks
+          src='/Services/Rocks.png'
+          className='parallax'
+          data-speedx='0.01'
+          data-speedy='0.02'
+          data-speedz='0'
+          data-rotation='0.09'
         />
         <Stone_1
           src='/Services/Stone_1.png'
           className='parallax'
-          data-speedx='0.15'
-          data-speedy='0.28'
+          data-speedx='0.02'
+          data-speedy='0.04'
           data-speedz='0'
-          data-rotation='0'
-          data-distance='-200'
+          data-rotation='0.1'
         />
         <Stone_2
           src='/Services/Stone_2.png'
           className='parallax'
-          data-speedx='0.13'
-          data-speedy='0.01'
+          data-speedx='0.04'
+          data-speedy='0.08'
           data-speedz='0'
-          data-rotation='0'
-          data-distance='850'
+          data-rotation='0.8'
         />
-
         <Stone_3
           src='/Services/Stone_3.png'
           className='parallax'
-          data-speedx='0.15'
-          data-speedy='0.08'
+          data-speedx='0.03'
+          data-speedy='0.06'
           data-speedz='0'
           data-rotation='0.0'
-          data-distance='2000'
-        />
-        <Moon
-          src='/Services/Moon.png'
-          className='parallax'
-          data-speedx='0.16'
-          data-speedy='0.15'
-          data-speedz='0'
-          data-rotation='0.02'
-          data-distance='1800'
-        />
-        <MoonShine
-          src='/Services/MoonShine.png'
-          className='parallax'
-          data-speedx='0.16'
-          data-speedy='0.15'
-          data-speedz='0'
-          data-rotation='0'
-          data-distance='1900'
         />
         <Stone_4
           src='/Services/Stone_4.png'
           className='parallax'
-          data-speedx='0.1'
-          data-speedy='0.01'
+          data-speedx='0.04'
+          data-speedy='0.08'
           data-speedz='0'
           data-rotation='0.09'
-          data-distance='2000'
         />
         <Stone_5
           src='/Services/Stone_5.png'
           className='parallax'
-          data-speedx='0.02'
-          data-speedy='0.01'
+          data-speedx='0.01'
+          data-speedy='0.02'
           data-speedz='0'
           data-rotation='0'
-          data-distance='2000'
         />
         <Stone_6
           src='/Services/Stone_6.png'
           className='parallax'
-          data-speedx='0.1'
-          data-speedy='0.01'
+          data-speedx='0.04'
+          data-speedy='0.08'
           data-speedz='0'
           data-rotation='0.09'
-          data-distance='2000'
         />
         <Stone_7
           src='/Services/Stone_7.png'
           className='parallax'
-          data-speedx='0.12'
-          data-speedy='0.18'
+          data-speedx='0.03'
+          data-speedy='0.06'
           data-speedz='0'
-          data-rotation='0'
-          data-distance='2000'
+          data-rotation='0.15'
         />
-
-        <Rocks
-          src='/Services/Rocks.png'
+        <Moon
+          src='/Services/Moon.png'
           className='parallax'
-          data-speedx='0.12'
-          data-speedy='0.12'
+          data-speedx='0.02'
+          data-speedy='0.03'
           data-speedz='0'
-          data-rotation='0.09'
-          data-distance='2000'
+          data-rotation='0.02'
+        />
+        <MoonShine
+          src='/Services/MoonShine.png'
+          className='parallax'
+          data-speedx='0.07'
+          data-speedy='0.07'
+          data-speedz='0.1'
+          data-rotation='0'
         />
 
         <AboutMe>
